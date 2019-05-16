@@ -16,7 +16,7 @@ $.ajax({
         method: "GET",
         success: function(response){
             console.log(response);
-            var imageSrc = response.items[1].volumeInfo.imageLinks.thumbnail;
+            var imageSrc = response.items.slice[0, 10].volumeInfo.imageLinks.thumbnail;
               var imageHtml = "<img src='" + imageSrc + " />";
               $("#body2").append(imageHtml);
             console.log(imageSrc);
