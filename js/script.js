@@ -16,9 +16,13 @@ $.ajax({
         method: "GET",
         success: function(response){
             console.log(response);
-            $("body2").append(response.items[0].selfLink);
+            var imageSrc = response.items[1].volumeInfo.imageLinks.thumbnail;
+              var imageHtml = "<img src='" + imageSrc + " />";
+              $("#body2").append(imageHtml);
+            console.log(imageSrc);
 
 
-        },
+        }
     });
      });
+     //response.items[0].volumeInfo.imageLinks.thumbnail
