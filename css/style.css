@@ -35,3 +35,16 @@ img{
   margin-right: auto;
   width: 100%;
 }
+#bimg{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+}
+.info{
+    color: black;
+  font-family: 'Cormorant Unicase', serif;
+text-align: center;
+font-size: 30px;
+}

@@ -16,7 +16,7 @@ $("#sbutton").click(function(){
         method: "GET",
         success: function(response){
             console.log('response', response);
-            response.items.slice(0, 4).forEach(function (book){
+            response.items.slice(0, 10).forEach(function (book){
                 var title = book.volumeInfo.title;
                 console.log(title);
                 var imgSrc = book.volumeInfo.imageLinks.smallThumbnail;
@@ -24,7 +24,7 @@ $("#sbutton").click(function(){
                 var html = `
                 <div>
                     <h1>${title}</h1>
-                    <img src='${imgSrc}' />
+                    <img id= "bimg" src='${imgSrc}' />
                 </div>
                 `
                 $("#books").append(html);
